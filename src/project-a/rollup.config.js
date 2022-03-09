@@ -30,13 +30,15 @@ function serve() {
 	};
 }
 
+const appName = 'project-a'
+
 export default {
-	input: 'src/main.ts',
+	input: `src/${appName}/App.svelte`,
 	output: {
 		sourcemap: true,
 		format: 'iife',
-		name: 'app',
-		file: 'public/build/bundle.js'
+		name: appName,
+		file: `public/build/${appName}/bundle.js`
 	},
 	plugins: [
 		svelte({
@@ -62,7 +64,8 @@ export default {
 		commonjs(),
 		typescript({
 			sourceMap: !production,
-			inlineSources: !production
+			inlineSources: !production,
+			tsconfig: `src/${appName}/tsconfig.json`
 		}),
 
 		// In dev mode, call `npm run start` once
