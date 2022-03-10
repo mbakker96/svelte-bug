@@ -26,8 +26,11 @@ Error: Unexpected token (Note that you need plugins to import files that are not
 
 ➜  typescript-probleem 
 ```
-```
+## How to run
+`npx rollup -c src/project-b/rollup.config.js`
+
 ##Project structure
+```
 |- package.json
 |- src/
   |- project-A/
