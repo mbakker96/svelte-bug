@@ -26,3 +26,21 @@ Error: Unexpected token (Note that you need plugins to import files that are not
 
 ➜  typescript-probleem 
 ```
+```
+##Project structure
+|- package.json
+|- src/
+  |- project-A/
+    |- tsconfig.json
+    |- rollup.config.js
+    |- App.svelte
+  |- project-B/
+    |- tsconfig.json
+    |- rollup.config.js
+    |- App.svelte
+  |- share/
+    |- utils/
+      |- utils.ts
+    |- datepicker
+      |- Datepicker.svelte
+```
